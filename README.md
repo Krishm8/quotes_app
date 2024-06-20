@@ -1,16 +1,7 @@
-# quotes_app
+This is my quotes_app
+All data call from api
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 2024-06-20 222105](https://github.com/Krishm8/quotes_app/assets/148517012/2b1f06ec-2edc-4d0d-9f8b-751bcf23b4f1)
+![Screenshot 2024-06-20 222040](https://github.com/Krishm8/quotes_app/assets/148517012/b988cbcd-e6cf-4d18-861a-dee6b17eafae)
+![Screenshot 2024-06-20 222852](https://github.com/Krishm8/quotes_app/assets/148517012/57a01426-7026-4325-bbcb-3b075c0cf68a)
+![Screenshot 2024-06-20 222141](https://github.com/Krishm8/quotes_app/assets/148517012/fea238f6-8358-4a73-85e0-cfa827fe63a8)
