@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:quotes_app/controller/home_provider.dart';
-import 'package:quotes_app/controller/theme_provider.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'package:quotes_app/view/screens/detail.dart';
+import 'package:quotes_app/view/screens/favorite.dart';
 import 'package:quotes_app/view/screens/home.dart';
 import 'package:quotes_app/view/screens/splash.dart';
 
@@ -20,29 +21,18 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => ThemeProvider(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: "/",
+      getPages: [
+        GetPage(name: "/", page: () => const SplashScreen()),
+        GetPage(name: "/home_page", page: () => HomePage(), transition: Transition.zoom,
         ),
-        ChangeNotifierProvider(
-          create: (context) => HomeProvider(),
-        )
+        GetPage(name: "/favorite_page", page: () => FavoritePage(),
+        ),
+        GetPage(name: "/detail", page: () => DetailPage(),
+        ),
       ],
-      builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          // theme: ThemeData.light(),
-          // darkTheme: ThemeData.dark(),
-          // themeMode: Provider.of<ThemeProvider>(context).getThemeMode(),
-          initialRoute: "/",
-          routes: {
-            "/": (context) => SplashScreen(),
-            "home": (context) => HomePage(),
-            "detail": (context) => DetailPage(),
-          },
-        );
-      },
     );
   }
 }
